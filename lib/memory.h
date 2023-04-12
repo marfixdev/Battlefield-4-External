@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include <iostream>
 #include <vector>
+#include <TlHelp32.h>
 class Memory
 {
 public:
@@ -29,5 +30,35 @@ public:
 			addr += offsets[i];
 		}
 		return addr;
+	}
+	HMODULE GetModuleBaseAddress(const char* toFind, DWORD pid)
+	{
+		HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, pid);
+		HMODULE ret = nullptr;
+		if (hSnapshot)
+		{
+			MODULEENTRY32 me32{};
+			me32.dwSize = sizeof(me32);
+
+			if (Module32First(hSnapshot, &me32))
+			{
+				do
+				{
+					// Debug.
+					//printf("%s\n", me32.szModule);
+
+					if (!strcmp(me32.szModule, toFind))
+					{
+						ret = me32.hModule;
+						break;
+					}
+
+				} while (Module32Next(hSnapshot, &me32));
+			}
+
+			CloseHandle(hSnapshot);
+		}
+
+		return ret;
 	}
 }m;

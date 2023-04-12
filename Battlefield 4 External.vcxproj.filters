@@ -16,10 +16,40 @@
     <Filter Include="lib">
       <UniqueIdentifier>{cb657a61-10e9-45a2-8f1e-f67af33d6cea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{8621fb22-f6c7-4bc8-b533-73a2daec9ce0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui\freetype">
+      <UniqueIdentifier>{3dc96b51-0d87-4685-b3ff-9f7da3d7c379}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Battlefield 4 External.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Imgui\imgui_impl_win32.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Imgui\imgui_freetype.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Imgui\imgui_impl_dx11.cpp">
+      <Filter>imgui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +64,198 @@
     </ClInclude>
     <ClInclude Include="lib\SimpleMath.h">
       <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\imgui_impl_win32.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\imgui_freetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\ft2build.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftmoderr.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftotval.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftoutln.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftparams.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftpfr.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftrender.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftsizes.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftsnames.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftstroke.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftsynth.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftsystem.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\fttrigon.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\fttypes.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftwinfnt.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\otsvg.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\t1tables.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ttnameid.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\tttables.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\tttags.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\freetype.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftadvanc.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftbbox.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftbdf.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftbitmap.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftbzip2.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftcache.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftchapters.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftcid.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftcolor.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftdriver.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\fterrdef.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\fterrors.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftfntfmt.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftgasp.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftglyph.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftgxval.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftgzip.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftimage.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftincrem.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftlcdfil.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftlist.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftlogging.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftlzw.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftmac.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftmm.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftmodapi.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\ftconfig.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\ftheader.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\ftmodule.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\ftoption.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\ftstdlib.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\integer-types.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\mac-support.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\public-macros.h">
+      <Filter>imgui\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\imgui_impl_dx11.h">
+      <Filter>imgui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,7 @@
 // http://go.microsoft.com/fwlink/?LinkID=615561
 //-------------------------------------------------------------------------------------
 #include "SimpleMath.h"
+using namespace DirectX::SimpleMath;
 /****************************************************************************
 *
 * Rectangle
@@ -45,39 +46,39 @@ inline void Rectangle::Inflate(long horizAmount, long vertAmount) noexcept
 // Static functions
 //------------------------------------------------------------------------------
 
-inline Rectangle Rectangle::Intersect(const Rectangle& ra, const Rectangle& rb) noexcept
-{
-    const long righta = ra.x + ra.width;
-    const long rightb = rb.x + rb.width;
-
-    const long bottoma = ra.y + ra.height;
-    const long bottomb = rb.y + rb.height;
-
-    const long maxX = ra.x > rb.x ? ra.x : rb.x;
-    const long maxY = ra.y > rb.y ? ra.y : rb.y;
-
-    const long minRight = righta < rightb ? righta : rightb;
-    const long minBottom = bottoma < bottomb ? bottoma : bottomb;
-
-    Rectangle result;
-
-    if ((minRight > maxX) && (minBottom > maxY))
-    {
-        result.x = maxX;
-        result.y = maxY;
-        result.width = minRight - maxX;
-        result.height = minBottom - maxY;
-    }
-    else
-    {
-        result.x = 0;
-        result.y = 0;
-        result.width = 0;
-        result.height = 0;
-    }
-
-    return result;
-}
+//inline Rectangle Rectangle::Intersect(const Rectangle& ra, const Rectangle& rb) noexcept
+//{
+//    const long righta = ra.x + ra.width;
+//    const long rightb = rb.x + rb.width;
+//
+//    const long bottoma = ra.y + ra.height;
+//    const long bottomb = rb.y + rb.height;
+//
+//    const long maxX = ra.x > rb.x ? ra.x : rb.x;
+//    const long maxY = ra.y > rb.y ? ra.y : rb.y;
+//
+//    const long minRight = righta < rightb ? righta : rightb;
+//    const long minBottom = bottoma < bottomb ? bottoma : bottomb;
+//
+//    Rectangle result;
+//
+//    if ((minRight > maxX) && (minBottom > maxY))
+//    {
+//        result.x = maxX;
+//        result.y = maxY;
+//        result.width = minRight - maxX;
+//        result.height = minBottom - maxY;
+//    }
+//    else
+//    {
+//        result.x = 0;
+//        result.y = 0;
+//        result.width = 0;
+//        result.height = 0;
+//    }
+//
+//    return result;
+//}
 
 inline RECT Rectangle::Intersect(const RECT& rcta, const RECT& rctb) noexcept
 {
@@ -107,27 +108,27 @@ inline RECT Rectangle::Intersect(const RECT& rcta, const RECT& rctb) noexcept
     return result;
 }
 
-inline Rectangle Rectangle::Union(const Rectangle& ra, const Rectangle& rb) noexcept
-{
-    const long righta = ra.x + ra.width;
-    const long rightb = rb.x + rb.width;
-
-    const long bottoma = ra.y + ra.height;
-    const long bottomb = rb.y + rb.height;
-
-    const int minX = ra.x < rb.x ? ra.x : rb.x;
-    const int minY = ra.y < rb.y ? ra.y : rb.y;
-
-    const int maxRight = righta > rightb ? righta : rightb;
-    const int maxBottom = bottoma > bottomb ? bottoma : bottomb;
-
-    Rectangle result;
-    result.x = minX;
-    result.y = minY;
-    result.width = maxRight - minX;
-    result.height = maxBottom - minY;
-    return result;
-}
+//inline Rectangle Rectangle::Union(const Rectangle& ra, const Rectangle& rb) noexcept
+//{
+//    const long righta = ra.x + ra.width;
+//    const long rightb = rb.x + rb.width;
+//
+//    const long bottoma = ra.y + ra.height;
+//    const long bottomb = rb.y + rb.height;
+//
+//    const int minX = ra.x < rb.x ? ra.x : rb.x;
+//    const int minY = ra.y < rb.y ? ra.y : rb.y;
+//
+//    const int maxRight = righta > rightb ? righta : rightb;
+//    const int maxBottom = bottoma > bottomb ? bottoma : bottomb;
+//
+//    Rectangle result;
+//    result.x = minX;
+//    result.y = minY;
+//    result.width = maxRight - minX;
+//    result.height = maxBottom - minY;
+//    return result;
+//}
 
 inline RECT Rectangle::Union(const RECT& rcta, const RECT& rctb) noexcept
 {

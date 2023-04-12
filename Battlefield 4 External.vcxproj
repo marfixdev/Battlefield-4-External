@@ -43,14 +43,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -71,12 +71,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(DXSDK_DIR)\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(DXSDK_DIR)\Lib\$(Platform_Actual);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(DXSDK_DIR)\Include;$(IncludePath);$(DXSDK_DIR)Include;D:\Github\Battlefield 4 External\lib\Freetype\include</IncludePath>
+    <LibraryPath>D:\Github\Battlefield 4 External\lib\Freetype\lib;$(DXSDK_DIR)\Lib\$(Platform_Actual);$(LibraryPath);$(DXSDK_DIR)Lib\x86;$(DXSDK_DIR)Lib\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(DXSDK_DIR)\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(DXSDK_DIR)\Lib\$(Platform_Actual);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(DXSDK_DIR)\Include;$(IncludePath);$(DXSDK_DIR)Include;D:\Github\Battlefield 4 External\lib\Freetype\include\freetype;D:\Github\Battlefield 4 External\lib\Freetype\include</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)\Lib\$(Platform_Actual);$(LibraryPath);D:\Github\Battlefield 4 External\lib\Freetype\lib;$(DXSDK_DIR)Lib\x86;$(DXSDK_DIR)Lib\x64</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -112,10 +112,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);dwmapi.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -126,19 +128,93 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);dwmapi.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Battlefield 4 External.cpp" />
+    <ClCompile Include="lib\Imgui\imgui.cpp" />
+    <ClCompile Include="lib\Imgui\imgui_demo.cpp" />
+    <ClCompile Include="lib\Imgui\imgui_draw.cpp" />
+    <ClCompile Include="lib\Imgui\imgui_freetype.cpp" />
+    <ClCompile Include="lib\Imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="lib\Imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="lib\Imgui\imgui_tables.cpp" />
+    <ClCompile Include="lib\Imgui\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\ftheader.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\ftoption.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\integer-types.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\mac-support.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\config\public-macros.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\freetype.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftadvanc.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftbbox.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftbdf.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftbitmap.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftbzip2.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftcache.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftchapters.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftcid.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftcolor.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftdriver.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\fterrdef.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\fterrors.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftgasp.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftglyph.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftgxval.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftgzip.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftimage.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftincrem.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftlist.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftlogging.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftlzw.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftmac.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftmm.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftmodapi.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftmoderr.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftotval.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftoutln.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftparams.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftpfr.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftrender.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftsizes.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftsnames.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftstroke.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftsynth.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftsystem.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\fttrigon.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\fttypes.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\otsvg.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\t1tables.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\ttnameid.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\tttables.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\freetype\tttags.h" />
+    <ClInclude Include="..\MFX\Dependency\freetype\include\ft2build.h" />
     <ClInclude Include="includes.h" />
+    <ClInclude Include="lib\Imgui\imconfig.h" />
+    <ClInclude Include="lib\Imgui\imgui.h" />
+    <ClInclude Include="lib\Imgui\imgui_freetype.h" />
+    <ClInclude Include="lib\Imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="lib\Imgui\imgui_impl_win32.h" />
+    <ClInclude Include="lib\Imgui\imgui_internal.h" />
+    <ClInclude Include="lib\Imgui\imstb_rectpack.h" />
+    <ClInclude Include="lib\Imgui\imstb_textedit.h" />
+    <ClInclude Include="lib\Imgui\imstb_truetype.h" />
     <ClInclude Include="lib\memory.h" />
     <ClInclude Include="lib\SimpleMath.h" />
     <ClInclude Include="overlay.h" />
