@@ -138,7 +138,7 @@
     <ClCompile Include="Battlefield 4 External.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Includes.h" />
+    <ClInclude Include="includes.h" />
     <ClInclude Include="lib\memory.h" />
     <ClInclude Include="lib\SimpleMath.h" />
     <ClInclude Include="overlay.h" />
