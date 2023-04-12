@@ -137,6 +137,15 @@
   <ItemGroup>
     <ClCompile Include="Battlefield 4 External.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Includes.h" />
+    <ClInclude Include="lib\memory.h" />
+    <ClInclude Include="lib\SimpleMath.h" />
+    <ClInclude Include="overlay.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\SimpleMath.inl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
